@@ -18,7 +18,7 @@ exports.expressCreateServer = function (hook_name, args, cb) {
     });
 
     var vreq = https.request({
-        host: 'persona.org',
+        host: 'verifier.login.persona.org',
         path: '/verify',
         method: 'POST',
         headers: {
