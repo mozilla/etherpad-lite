@@ -463,7 +463,7 @@ var pad = {
     {
       try
       {
-        doc.execCommand("BackgroundImageCache", false, true);
+        document.execCommand("BackgroundImageCache", false, true);
       }
       catch (e)
       {}
@@ -524,7 +524,7 @@ var pad = {
       if(padcookie.getPref("showAuthorshipColors") == false){
         pad.changeViewOption('showAuthorColors', false);
       }
-      hooks.aCallAll("postAceInit", {ace: padeditor.ace});
+      hooks.aCallAll("postAceInit", {ace: padeditor.ace, pad: pad});
     }
   },
   dispose: function()
